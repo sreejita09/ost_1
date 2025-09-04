@@ -1,0 +1,23 @@
+# Program to calculate average grades for students
+# Contains intentional logic and syntax bugs
+
+def calculate_average(marks):
+    total = 0
+    for mark in marks:
+        total += mark
+    avg = total / len(mark)   # ❌ BUG: should be len(marks)
+    return avg
+
+def main():
+    students = {
+        "Alice": [85, 90, 78],
+        "Bob": [65, 70, 72],
+        "Charlie": [95, 88, 92],
+        "Daisy": []  # ❌ BUG: division by zero later
+    }
+
+    for student in students:
+        average = calculate_average(students[student])
+        print(student + " has an average grade of " + average)  # ❌ BUG: str + float error
+
+main()
