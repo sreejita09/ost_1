@@ -5,7 +5,8 @@ def calculate_average(marks):
     total = 0
     for mark in marks:
         total += mark
-    avg = total / len(mark)   # ❌ BUG: should be len(marks)
+
+avg = total / len(mark)   # ❌ BUG: should be len(marks)
     return avg
 
 def main():
